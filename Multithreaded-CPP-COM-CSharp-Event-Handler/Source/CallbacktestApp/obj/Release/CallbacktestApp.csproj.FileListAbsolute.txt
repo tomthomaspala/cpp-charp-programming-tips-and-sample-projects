@@ -1,0 +1,10 @@
+D:\Upwork Task\CallbackDLL\CallbacktestApp\bin\Release\CallbacktestApp.exe.config
+D:\Upwork Task\CallbackDLL\CallbacktestApp\obj\Release\Interop.CallbackDLLLib.dll
+D:\Upwork Task\CallbackDLL\CallbacktestApp\obj\Release\CallbacktestApp.csproj.ResolveComReference.cache
+D:\Upwork Task\CallbackDLL\CallbacktestApp\bin\Release\CallbacktestApp.exe
+D:\Upwork Task\CallbackDLL\CallbacktestApp\bin\Release\CallbacktestApp.pdb
+D:\Upwork Task\CallbackDLL\CallbacktestApp\obj\Release\CallbacktestApp.Form1.resources
+D:\Upwork Task\CallbackDLL\CallbacktestApp\obj\Release\CallbacktestApp.Properties.Resources.resources
+D:\Upwork Task\CallbackDLL\CallbacktestApp\obj\Release\CallbacktestApp.csproj.GenerateResource.Cache
+D:\Upwork Task\CallbackDLL\CallbacktestApp\obj\Release\CallbacktestApp.exe
+D:\Upwork Task\CallbackDLL\CallbacktestApp\obj\Release\CallbacktestApp.pdb

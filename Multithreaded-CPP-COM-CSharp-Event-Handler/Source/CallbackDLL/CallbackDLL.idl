@@ -1,0 +1,90 @@
+// CallbackDLL.idl : IDL source for CallbackDLL
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CallbackDLL.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+interface ICallbackEvents;
+interface ICallbackParam;
+
+[
+	object,
+	uuid(BEEBF14E-F2A9-462D-BD2F-A74948C2F9D6),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ICallbackTest : IDispatch{
+	[id(1)] HRESULT INIT();
+	[id(2)] HRESULT INITEx(ICallbackEvents* EventsMethodsObj);
+	[id(3)] HRESULT STOP();
+	
+	[propget, id(4)] HRESULT Data([out, retval] ICallbackParam* pVal);
+	
+};
+[
+	object,
+	uuid(7F1F42C6-6201-4497-BE2E-08C231C6B1AB),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ICallbackParam : IDispatch{
+	[propget, id(1)] HRESULT Param1([out, retval] LONG* pVal);
+	[propput, id(1)] HRESULT Param1([in] LONG newVal);
+	[propget, id(2)] HRESULT Param2([out, retval] BSTR* pVal);
+	[propput, id(2)] HRESULT Param2([in] BSTR newVal);
+	
+};
+[
+	object,
+	uuid(2CE2C7DF-62AA-47A4-A248-499A94BCDB60),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ICallbackEvents : IDispatch{
+	[id(1)] HRESULT OnStatusChangeEx(ICallbackParam* Param);
+};
+[
+	uuid(6BA21895-043E-425E-9FA0-B8BFB93F10B0),
+	version(1.0),
+]
+library CallbackDLLLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(767EC398-BC0B-4F09-BF0A-A259CB26A800)		
+	]
+	dispinterface _ICallbackTestEvents
+	{
+		properties:
+		methods:
+			[id(1)] HRESULT OnStatusChange(ICallbackParam* Param);
+	};
+	[
+		uuid(536C50A8-C84F-4A18-9F8B-9E217E0E0CD4)		
+	]
+	coclass CallbackTest
+	{
+		[default] interface ICallbackTest;
+		[default, source] dispinterface _ICallbackTestEvents;
+	};
+	[
+		uuid(7A993BC5-6A64-45CB-9C85-D02BB453F9CC)		
+	]
+	coclass CallbackParam
+	{
+		[default] interface ICallbackParam;
+	};
+	[
+		uuid(7D58AA7F-D64C-479A-A5C4-0665AF132E3C)		
+	]
+	coclass CallbackEvents
+	{
+		[default] interface ICallbackEvents;
+	};
+};
+
