@@ -23,7 +23,9 @@ How to Run the Program
 2. Compile and Run the Two Test App see how the Sample Works  
    
 
-
+Development Environment
+=======================
+Visual Studio 2015 Community Edition | Windows 7 64 Bit
 
 
 
