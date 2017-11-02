@@ -1,4 +1,5 @@
-Multithreaded C++ | ATL | COM CSharp Event Handler Sample 
+Multithreaded C++ ATL COM CSharp Event Handler Sample 
+=====================================================
 
 This Project Sample Demonstrates how to develop a Multithreaded C++|ATL|COM Component Which implements  IConnectionPoint Interface so that It can fire events to COM Component Hosted applications in C#.NET and in C++
 
