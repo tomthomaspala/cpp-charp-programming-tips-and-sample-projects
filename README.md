@@ -1,4 +1,4 @@
-Programing Tips and Sample Projects
+C++|C# Programing Tips and Sample Projects
 ===================================
 
 In this repository , I will provide you with how to sample projects related to advanced technologies in VC++ , C#.NET , Java , QT C++ etc. 
