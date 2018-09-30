@@ -23,6 +23,10 @@
 #include "ControlsDemoView.h"
 #include "MainFrm.h"
 
+//The follwing Import directive is needed to import the Interfaces in MS Chart Control to call various interfaces like IVcPlot , IVcAxiz etc
+#import <msdatsrc.tlb> no_namespace
+#import "Lib\MSCHRT20.OCX"   no_namespace //For convenience I placed the OCX control to My Own Folder
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -249,6 +253,23 @@ void CControlsDemoView::OnButtonXyDemo()
 	m_pChartCtrl->put_TitleText(_T("X Axis | Distance Vs Refractive Index | Y Axis"));
 	m_pChartCtrl->put_ColumnLabel(_T("Refractive Index"));
 	m_pChartCtrl->put_RowLabel(_T("Distance"));
+
+	IVcPlot* pPlot= (IVcPlot*)m_pChartCtrl->get_Plot();
+	IVcAxis* pXAxis;
+	IVcAxis* pYAxis;
+	VARIANT varIndex;
+	varIndex.vt = VT_I2;
+	pPlot->get_Axis(VtChAxisId::VtChAxisIdX, varIndex,&pXAxis);
+
+	IVcAxisTitlePtr XAxisTile = pXAxis->GetAxisTitle();
+	XAxisTile->Text = CString(_T("Distance")).AllocSysString();
+
+	varIndex.vt = VT_I2;
+	pPlot->get_Axis(VtChAxisId::VtChAxisIdY, varIndex, &pYAxis);
+
+	IVcAxisTitlePtr YAxisTile = pYAxis->GetAxisTitle();
+	YAxisTile->Text = CString(_T("Refractive Index")).AllocSysString();
+
 	m_pChartCtrl->Refresh();
 
 	
