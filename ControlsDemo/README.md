@@ -11,7 +11,7 @@ Currently the Sample ships with the follwing ActiveX VC++ Samples.
 
 Development Environment
 =======================
-Visual Studio 2015 Community Edition | Windows 7 64 Bit
+Visual Studio 2015 Community Edition | Windows 7 32 Bit
 
 
 
