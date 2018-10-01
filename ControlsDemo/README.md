@@ -2,7 +2,6 @@ SampleDemo|ActiveX Control Samples
 ==================================
 
 This Project Sample Demonstrates how to use different ActiveX control shipping with VC++ and MS Office
-#The Project Sample Contains 3 Projects
 
 Currently the Sample ships with the follwing ActiveX VC++ Samples. 
 
